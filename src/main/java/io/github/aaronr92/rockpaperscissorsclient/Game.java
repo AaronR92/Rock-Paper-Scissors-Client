@@ -97,7 +97,7 @@ public class Game {
     public static void printResults(FinishState finishState) {
         System.out.println("\n🎮 GAME IS OVER");
         System.out.println("It is " + finishState.name());
-        System.out.println(" -> Menu <- ");
+        System.out.println("\n-> Menu <- ");
     }
 
     public static void printRemainingTime(int seconds) {
@@ -113,7 +113,7 @@ public class Game {
 
     public static void printLogInResult() {
         if (isLoggedIn) {
-            System.out.println("-> Menu <-");
+            System.out.println("\n-> Menu <-");
             System.out.println("ℹ️ If you are ready, type: start");
             System.out.println("You can also logout at any time \n" +
                     "and your progress will be saved! Type: logout");

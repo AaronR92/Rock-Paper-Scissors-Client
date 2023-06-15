@@ -105,7 +105,10 @@ public class Game {
     }
 
     public static void printServerChoice(GameStepAction action) {
-        System.out.println("🤖 Server choice is " + action.name());
+        if (action != null)
+            System.out.println("🤖 Server choice is " + action.name());
+        else
+            System.out.println("😑 You skipped round");
     }
 
     public static void printLogInResult() {

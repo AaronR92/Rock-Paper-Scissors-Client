@@ -97,6 +97,12 @@ public class Game {
     public static void printResults(FinishState finishState) {
         System.out.println("\n🎮 GAME IS OVER");
         System.out.println("It is " + finishState.name());
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            System.out.println("Something went wrong");
+        }
         System.out.println("\n-> Menu <- ");
     }
 

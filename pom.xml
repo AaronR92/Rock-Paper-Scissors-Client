@@ -6,9 +6,9 @@
 
     <groupId>io.github.aaronr92</groupId>
     <artifactId>rock-paper-scissors-client</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <name>rock-paper-scissors-client</name>
-    <description>rock-paper-scissors-client</description>
+    <description>Game client for rock-paper-scissors-server</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

@@ -15,9 +15,10 @@ import java.io.IOException;
 
 public class Network {
 
-    private static final String serverIp = "127.0.0.1";
+    private static final String SERVER_IP = "127.0.0.1";
+    private static final int TCP_PORT = 54555;
 
-    private Client client;
+    private final Client client;
     private String login;
     private String password;
     private long playerId;
@@ -72,7 +73,7 @@ public class Network {
     public void sendSignInPacket(String login, String password) {
         try {
             ClientboundConnectionPacket packet = new ClientboundConnectionPacket(login, password, false);
-            client.connect(5000, serverIp, ClientApp.TCP_PORT);
+            client.connect(5000, SERVER_IP, TCP_PORT);
             client.sendTCP(packet);
 
             this.login = login;
@@ -89,7 +90,7 @@ public class Network {
                     password,
                     true
             );
-            client.connect(5000, serverIp, ClientApp.TCP_PORT);
+            client.connect(5000, SERVER_IP, TCP_PORT);
             client.sendTCP(packet);
 
             this.login = login;
@@ -105,7 +106,7 @@ public class Network {
                     login,
                     password
             );
-            client.connect(5000, serverIp, ClientApp.TCP_PORT);
+            client.connect(5000, SERVER_IP, TCP_PORT);
             client.sendTCP(packet);
         } catch (IOException e) {
             throw new RuntimeException(e);
